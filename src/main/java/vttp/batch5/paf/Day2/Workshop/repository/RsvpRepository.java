@@ -9,7 +9,7 @@ import vttp.batch5.paf.Day2.Workshop.models.Rsvp;
 
 import static vttp.batch5.paf.Day2.Workshop.repository.Queries.*;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -20,7 +20,7 @@ public class RsvpRepository {
     public List<Rsvp> getAllRsvp(){
         SqlRowSet rs = template.queryForRowSet(SQL_SELECT_ALL_RSVP);
 
-        List<Rsvp> list = new LinkedList();
+        List<Rsvp> list = new ArrayList<>();
         
         while(rs.next()){
             //instantiate and add to list
