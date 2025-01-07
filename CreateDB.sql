@@ -14,9 +14,8 @@ create table rsvp (
     phone int not null, 
     confirmation_date date not null,
     comments varchar(256),
-    name varchar(128) not null,
-    constraint PK_email primary key (email), -- make primary key email unique
-    constraint CHK_phone check(phone >= 80000000 and phone <= 9999999) -- check for 8 digits
+    -- name varchar(128) not null,
+    constraint PK_email primary key (email) -- make primary key email unique- check for 8 digits
 );
 
 -- now load thru command line client mysql
